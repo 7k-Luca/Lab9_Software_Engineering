@@ -11,7 +11,8 @@ def encoder(password):
 
 
 def decoder(encoded_password):
-    # Decoder Function
+    decoded = [(int(char) - 3) % 10 for char in encoded_password]
+    return ''.join(map(str, decoded))
 
 
 def main():
